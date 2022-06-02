@@ -5,11 +5,11 @@ metadata:
   labels:
     run: nginx-service
   namespace: default
-spec: 
-  ports: 
+spec:
+  type: NodePort    
+  ports:
   - ports: 80
     protocol: TCP
     targetPort: 80
   selector: 
-  run: nginx-service
-  type: NodePort
+    run: nginx-service
